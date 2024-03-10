@@ -68,6 +68,10 @@
         color: white;
         cursor: pointer;
     }
+    
+    #goToProtectedPageButton {
+        display: none; /* El botón estará oculto inicialmente */
+    }
 </style>
 <body>
 
@@ -79,6 +83,7 @@
         <input type="password" id="password" placeholder="Enter Password">
         <button type="button" onclick="login()">Login</button>
     </form>
+    <button id="goToProtectedPageButton" onclick="goToProtectedPage()">Go to Protected Page</button>
 </div>
 
 <script>
@@ -87,13 +92,19 @@
 
         // Verificar la contraseña (aquí puedes cambiar la contraseña a tu preferencia)
         if (password === "71804217") {
-            // Redireccionar a la página protegida
-            window.location.href = "unfollowPage.html";
+            // Mostrar el botón para ir a la página protegida
+            document.getElementById("goToProtectedPageButton").style.display = "block";
         } else {
             alert("Contraseña incorrecta. Inténtalo de nuevo.");
         }
+    }
+    
+    function goToProtectedPage() {
+        // Redireccionar a la página protegida
+        window.location.href = "scallocondog.github.io/unfollowPage.html";
     }
 </script>
 
 </body>
 </html>
+
