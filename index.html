@@ -3,12 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>InstagramUnfollowers</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"
-          integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-coy.min.css"
-        integrity="sha512-XcB0I04SuOVkb6ewfVz0qMhU5QADIiFBFxPRRNWZUANF1W5onx8GlbHYYIivw3gXrTuZfu+1gAG8HvvKQG3oGA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
     body {
@@ -69,8 +63,9 @@
         cursor: pointer;
     }
     
-    #goToProtectedPageButton {
-        display: none; /* El botón estará oculto inicialmente */
+    #protectedContent {
+        display: none;
+        color: white;
     }
 </style>
 <body>
@@ -83,7 +78,10 @@
         <input type="password" id="password" placeholder="Enter Password">
         <button type="button" onclick="login()">Login</button>
     </form>
-    <button id="goToProtectedPageButton" onclick="goToProtectedPage()">Go to Protected Page</button>
+    <div id="protectedContent">
+        <h2>Protected Content</h2>
+        <p>This content is protected. You are logged in.</p>
+    </div>
 </div>
 
 <script>
@@ -92,19 +90,13 @@
 
         // Verificar la contraseña (aquí puedes cambiar la contraseña a tu preferencia)
         if (password === "71804217") {
-            // Mostrar el botón para ir a la página protegida
-            document.getElementById("goToProtectedPageButton").style.display = "block";
+            // Mostrar el contenido protegido
+            document.getElementById("protectedContent").style.display = "block";
         } else {
             alert("Contraseña incorrecta. Inténtalo de nuevo.");
         }
-    }
-    
-    function goToProtectedPage() {
-        // Redireccionar a la página protegida
-        window.location.href = "scallocondog.github.io/unfollowPage.html";
     }
 </script>
 
 </body>
 </html>
-
