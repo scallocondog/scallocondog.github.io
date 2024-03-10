@@ -85,14 +85,6 @@
 </div>
 
 <script>
-    // Al cargar la página, verifica si la sesión está activa
-    window.onload = function() {
-        var sessionActive = localStorage.getItem("sessionActive");
-        if (sessionActive === "true") {
-            document.getElementById("protectedContent").style.display = "block";
-        }
-    };
-
     function login() {
         var password = document.getElementById("password").value;
 
@@ -100,8 +92,6 @@
         if (password === "71804217") {
             // Mostrar el contenido protegido
             document.getElementById("protectedContent").style.display = "block";
-            // Guardar el estado de la sesión en el almacenamiento local
-            localStorage.setItem("sessionActive", "true");
         } else {
             alert("Contraseña incorrecta. Inténtalo de nuevo.");
         }
@@ -110,4 +100,3 @@
 
 </body>
 </html>
-
