@@ -85,8 +85,11 @@
     function login() {
         var password = document.getElementById("password").value;
 
-        // Verificar la contraseña (aquí puedes cambiar la contraseña a tu preferencia)
-        if (password === "71804217") {
+        // Encriptar la contraseña (puedes usar un algoritmo de hash, como bcrypt, pero no es perfecto en el lado del cliente)
+        var encryptedPassword = btoa(password);
+
+        // Verificar la contraseña encriptada (aquí deberías tener una contraseña encriptada almacenada de manera segura)
+        if (encryptedPassword === "NzE4MDQyMTc=") { // En este ejemplo, la contraseña "71804217" está encriptada con base64
             // Redireccionar a la página protegida
             window.location.href = "unfollowPage.html";
         } else {
